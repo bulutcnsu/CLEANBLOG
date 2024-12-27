@@ -4,7 +4,7 @@ const ejs = require('ejs');
 const path = require('path');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const BlogPost = require('./models/BlogModel');
+const BlogModel = require('./models/BlogModel');
 const { truncate, copyFile } = require('fs');
 
 
@@ -23,7 +23,7 @@ app.use(express.json())
 
 
 app.get('/', async (req, res) => {
-  const _posts = await BlogPost.find({})
+  const _posts = await BlogModel.find({})
     //res.render('index', {photos: posts})
   res.render('index',
      {_posts}
@@ -31,7 +31,7 @@ app.get('/', async (req, res) => {
 
 app.get("/post/:id", async(req, res) => {
   //console.log(req.params.id);
-  const postInfo = await BlogPost.findById(req.params.id);
+  const postInfo = await BlogModel.findById(req.params.id);
   res.render('post', {postInfo}
 
   )});
@@ -54,7 +54,7 @@ app.listen(port, () => {
 
 
  app.post('/posts', async (req, res) => { // async - await yapısı kullanacğız.
-  await BlogPost.create(req.body) ;
+  await BlogModel.create(req.body) ;
           // body bilgisini Photo modeli sayesinde veritabanında dökümana dönüştürüyoruz.
   res.redirect('/')
 });
