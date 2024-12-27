@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const BlogPost = require('./models/BlogModel');
 const { truncate, copyFile } = require('fs');
-const BlogModel = require('./models/BlogModel');
+
 
 
 mongoose
@@ -31,7 +31,7 @@ app.get('/', async (req, res) => {
 
 app.get("/post/:id", async(req, res) => {
   //console.log(req.params.id);
-  const postInfo = await BlogModel.findById(req.params.id);
+  const postInfo = await BlogPost.findById(req.params.id);
   res.render('post', {postInfo}
 
   )});
