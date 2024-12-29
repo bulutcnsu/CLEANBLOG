@@ -32,10 +32,10 @@ exports.createPost = (req, res) => {
   let uploadPath = '../CleanBlog/public/uploads/';
   let sampleFile = req.files.image;
 
-  if (!fs.existsSync(uploadPath)) {
+/*  if (!fs.existsSync(uploadPath)) {
     // Bunun için const fs = require('fs'); almamız gerekir.
     fs.mkdirSync(uploadPath);
-  }
+  }*/
 
   uploadPath = '../CleanBlog/public/uploads/' + sampleFile.name;
   console.log(" foto bilgileri : ",sampleFile);
