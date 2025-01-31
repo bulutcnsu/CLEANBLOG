@@ -14,7 +14,7 @@ const pageController = require("./controllers/pageController");
 
 
 mongoose
-  .connect('mongodb+srv://softwarelearner90:6pr2W4xkHiWU1Tub@cluster0.6pwy0.mongodb.net/')
+  .connect('mongodb+srv://ss:ss@cluster0.6pwy0.mongodb.net/')
   .then(() => {console.log('Connected!')})
   .catch((err) => {console.log('Hata olustu', err)})
 
