@@ -46,9 +46,9 @@ app.listen(port, () => {
 });
 
 
- app.post('/posts', async (req, res) => { // async - await yapısı kullanacğız.
+ app.post('/posts', async (req, res) => { 
   await BlogModel.create(req.body) ;
-          // body bilgisini Photo modeli sayesinde veritabanında dökümana dönüştürüyoruz.
+        
   res.redirect('/')
 });
 
