@@ -1,3 +1,3 @@
-"# CLEANBLOG" 
-"# POSTING BLOGS"
-# CLEAN-BLOG  is a Patika Academy project.
+
+Blog Post Node-JS app <br>
+ CLEAN-BLOG  is a Patika Academy project."
